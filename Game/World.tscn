@@ -1,11 +1,8 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://FPS_Label.gd" type="Script" id=1]
-[ext_resource path="res://free3Dmodel_anim_default.scn" type="PackedScene" id=2]
-[ext_resource path="res://free3Dmodel_anim_default.gd" type="Script" id=3]
-[ext_resource path="res://free3Dmodel.msh" type="Mesh" id=4]
-[ext_resource path="res://robot.gd" type="Script" id=5]
-[ext_resource path="res://plane.msh" type="Mesh" id=6]
+[ext_resource path="res://plane.msh" type="Mesh" id=2]
+[ext_resource path="res://Characters/Robot/robot_anim.scn" type="PackedScene" id=3]
 
 [sub_resource type="Environment" id=1]
 
@@ -63,7 +60,6 @@ environment = SubResource( 1 )
 
 [node name="Lights" type="Spatial" parent="."]
 
-editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="Lights"]
@@ -182,267 +178,6 @@ lines_skipped = 0
 max_lines_visible = -1
 script/script = ExtResource( 1 )
 
-[node name="AnimatedRobots" type="Spatial" parent="."]
-
-_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-
-[node name="free3Dmodel_anim_default" parent="AnimatedRobots" instance=ExtResource( 2 )]
-
-script/script = ExtResource( 3 )
-
-[node name="free3Dmodel_anim_default3 3" parent="AnimatedRobots" instance=ExtResource( 2 )]
-
-transform/local = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, -0.655466 )
-script/script = ExtResource( 3 )
-
-[node name="free3Dmodel_anim_default34" parent="AnimatedRobots" instance=ExtResource( 2 )]
-
-transform/local = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, -1.41289 )
-script/script = ExtResource( 3 )
-
-[node name="free3Dmodel_anim_default1" parent="AnimatedRobots" instance=ExtResource( 2 )]
-
-transform/local = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.06673, 0, 0 )
-script/script = ExtResource( 3 )
-
-[node name="free3Dmodel_anim_default3" parent="AnimatedRobots" instance=ExtResource( 2 )]
-
-transform/local = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.06673, 0, -0.655466 )
-script/script = ExtResource( 3 )
-
-[node name="free3Dmodel_anim_default4" parent="AnimatedRobots" instance=ExtResource( 2 )]
-
-transform/local = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.06673, 0, -1.41289 )
-script/script = ExtResource( 3 )
-
-[node name="free3Dmodel_anim_default2" parent="AnimatedRobots" instance=ExtResource( 2 )]
-
-transform/local = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.0537, 0, 0 )
-script/script = ExtResource( 3 )
-
-[node name="free3Dmodel_anim_default3 2" parent="AnimatedRobots" instance=ExtResource( 2 )]
-
-transform/local = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.0537, 0, -0.655466 )
-script/script = ExtResource( 3 )
-
-[node name="free3Dmodel_anim_default33" parent="AnimatedRobots" instance=ExtResource( 2 )]
-
-transform/local = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.0537, 0, -1.41289 )
-script/script = ExtResource( 3 )
-
-[node name="StaticRobots" type="Spatial" parent="."]
-
-editor/display_folded = true
-_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-visibility/visible = false
-
-[node name="MeshInstance" type="MeshInstance" parent="StaticRobots"]
-
-_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
-layers = 1
-geometry/visible = true
-geometry/material_override = null
-geometry/cast_shadow = 1
-geometry/receive_shadows = true
-geometry/range_begin = 0.0
-geometry/range_end = 0.0
-geometry/extra_cull_margin = 0.0
-geometry/billboard = false
-geometry/billboard_y = false
-geometry/depth_scale = false
-geometry/visible_in_all_rooms = false
-geometry/use_baked_light = false
-geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 4 )
-mesh/skeleton = NodePath("..")
-material/0 = null
-script/script = ExtResource( 5 )
-
-[node name="MeshInstance4" type="MeshInstance" parent="StaticRobots"]
-
-_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, -1.44554 )
-layers = 1
-geometry/visible = true
-geometry/material_override = null
-geometry/cast_shadow = 1
-geometry/receive_shadows = true
-geometry/range_begin = 0.0
-geometry/range_end = 0.0
-geometry/extra_cull_margin = 0.0
-geometry/billboard = false
-geometry/billboard_y = false
-geometry/depth_scale = false
-geometry/visible_in_all_rooms = false
-geometry/use_baked_light = false
-geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 4 )
-mesh/skeleton = NodePath("..")
-material/0 = null
-script/script = ExtResource( 5 )
-
-[node name="MeshInstance3" type="MeshInstance" parent="StaticRobots"]
-
-_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, -0.510354 )
-layers = 1
-geometry/visible = true
-geometry/material_override = null
-geometry/cast_shadow = 1
-geometry/receive_shadows = true
-geometry/range_begin = 0.0
-geometry/range_end = 0.0
-geometry/extra_cull_margin = 0.0
-geometry/billboard = false
-geometry/billboard_y = false
-geometry/depth_scale = false
-geometry/visible_in_all_rooms = false
-geometry/use_baked_light = false
-geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 4 )
-mesh/skeleton = NodePath("..")
-material/0 = null
-script/script = ExtResource( 5 )
-
-[node name="MeshInstance1" type="MeshInstance" parent="StaticRobots"]
-
-_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.03844, 0, 0 )
-layers = 1
-geometry/visible = true
-geometry/material_override = null
-geometry/cast_shadow = 1
-geometry/receive_shadows = true
-geometry/range_begin = 0.0
-geometry/range_end = 0.0
-geometry/extra_cull_margin = 0.0
-geometry/billboard = false
-geometry/billboard_y = false
-geometry/depth_scale = false
-geometry/visible_in_all_rooms = false
-geometry/use_baked_light = false
-geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 4 )
-mesh/skeleton = NodePath("..")
-material/0 = null
-script/script = ExtResource( 5 )
-
-[node name="MeshInstance4 2" type="MeshInstance" parent="StaticRobots"]
-
-_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.03844, 0, -1.44554 )
-layers = 1
-geometry/visible = true
-geometry/material_override = null
-geometry/cast_shadow = 1
-geometry/receive_shadows = true
-geometry/range_begin = 0.0
-geometry/range_end = 0.0
-geometry/extra_cull_margin = 0.0
-geometry/billboard = false
-geometry/billboard_y = false
-geometry/depth_scale = false
-geometry/visible_in_all_rooms = false
-geometry/use_baked_light = false
-geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 4 )
-mesh/skeleton = NodePath("..")
-material/0 = null
-script/script = ExtResource( 5 )
-
-[node name="MeshInstance3 2" type="MeshInstance" parent="StaticRobots"]
-
-_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.03844, 0, -0.510354 )
-layers = 1
-geometry/visible = true
-geometry/material_override = null
-geometry/cast_shadow = 1
-geometry/receive_shadows = true
-geometry/range_begin = 0.0
-geometry/range_end = 0.0
-geometry/extra_cull_margin = 0.0
-geometry/billboard = false
-geometry/billboard_y = false
-geometry/depth_scale = false
-geometry/visible_in_all_rooms = false
-geometry/use_baked_light = false
-geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 4 )
-mesh/skeleton = NodePath("..")
-material/0 = null
-script/script = ExtResource( 5 )
-
-[node name="MeshInstance2" type="MeshInstance" parent="StaticRobots"]
-
-_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.07274, 0, 0 )
-layers = 1
-geometry/visible = true
-geometry/material_override = null
-geometry/cast_shadow = 1
-geometry/receive_shadows = true
-geometry/range_begin = 0.0
-geometry/range_end = 0.0
-geometry/extra_cull_margin = 0.0
-geometry/billboard = false
-geometry/billboard_y = false
-geometry/depth_scale = false
-geometry/visible_in_all_rooms = false
-geometry/use_baked_light = false
-geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 4 )
-mesh/skeleton = NodePath("..")
-material/0 = null
-script/script = ExtResource( 5 )
-
-[node name="MeshInstance4 3" type="MeshInstance" parent="StaticRobots"]
-
-_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.07274, 0, -1.44554 )
-layers = 1
-geometry/visible = true
-geometry/material_override = null
-geometry/cast_shadow = 1
-geometry/receive_shadows = true
-geometry/range_begin = 0.0
-geometry/range_end = 0.0
-geometry/extra_cull_margin = 0.0
-geometry/billboard = false
-geometry/billboard_y = false
-geometry/depth_scale = false
-geometry/visible_in_all_rooms = false
-geometry/use_baked_light = false
-geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 4 )
-mesh/skeleton = NodePath("..")
-material/0 = null
-script/script = ExtResource( 5 )
-
-[node name="MeshInstance3 3" type="MeshInstance" parent="StaticRobots"]
-
-_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.07274, 0, -0.510354 )
-layers = 1
-geometry/visible = true
-geometry/material_override = null
-geometry/cast_shadow = 1
-geometry/receive_shadows = true
-geometry/range_begin = 0.0
-geometry/range_end = 0.0
-geometry/extra_cull_margin = 0.0
-geometry/billboard = false
-geometry/billboard_y = false
-geometry/depth_scale = false
-geometry/visible_in_all_rooms = false
-geometry/use_baked_light = false
-geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 4 )
-mesh/skeleton = NodePath("..")
-material/0 = null
-script/script = ExtResource( 5 )
-
 [node name="Floor" type="MeshInstance" parent="."]
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
@@ -460,8 +195,10 @@ geometry/depth_scale = false
 geometry/visible_in_all_rooms = false
 geometry/use_baked_light = false
 geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 6 )
+mesh/mesh = ExtResource( 2 )
 mesh/skeleton = NodePath("..")
 material/0 = null
+
+[node name="Robot" parent="." instance=ExtResource( 3 )]
 
 
